@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreshDish – Delicious food online with fast delivery">
+    <meta name="keywords" content="Food, Restaurant, Online Order, FreshDish">
     <link rel="icon" type="image/png" href="images/S.png" />
-    <title>FreshDish Food-Website</title>
+    <title>FreshDish Food Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -22,254 +26,237 @@
             <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#chefs">Chefs</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#chefs" class="nav-link">Chefs</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Delicious Meals, <span>Freshly Served</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.ue odit?</p>
+            <p>Order your favorite meals online and enjoy fresh, hot delivery at your doorstep.</p>
             <a href="#menu" class="hero-btn">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-
         <div class="hero-image">
-            <img src="images/Delicious Food.png" alt="Delicious Food">
+            <img src="images/Delicious Food.png" alt="Delicious Food" loading="lazy">
         </div>
     </section>
 
-
-
-
-    <section class="Features" id="Features">
-        <h1 class="heading"> our <span>features</span></h1>
-
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h1 class="heading">Our <span>Features</span></h1>
         <div class="box-container">
             <div class="box">
-                <img src="images/freshfood.png" alt="image">
-                <h3>fresh and organic</h3>
-                <p>We deliver only farm-fresh vegetables and fruits, sourced directly from trusted growers!</p>
-                <a href="#" class="btn">read more</a>
+                <img src="images/freshfood.png" alt="Fresh and Organic" loading="lazy">
+                <h3>Fresh & Organic</h3>
+                <p>We deliver only farm-fresh vegetables and fruits sourced from trusted growers!</p>
             </div>
             <div class="box">
-                <img src="images/menriding.png" alt="image">
-                <h3>free delivery</h3>
-                <p>Enjoy fast and free delivery on every order, without any hidden charges.!</p>
-                <a href="#" class="btn">read more</a>
+                <img src="images/menriding.png" alt="Free Delivery" loading="lazy">
+                <h3>Free Delivery</h3>
+                <p>Fast and free delivery on every order, without hidden charges!</p>
             </div>
             <div class="box">
-                <img src="images/easyPayments.png" alt="image">
-                <h3>easy payment</h3>
-                <p>Safe and secure payments with multiple trusted payment options.!</p>
-                <a href="#" class="btn">read more</a>
+                <img src="images/easyPayments.png" alt="Easy Payment" loading="lazy">
+                <h3>Easy Payment</h3>
+                <p>Safe and secure payments with multiple trusted options!</p>
             </div>
-
         </div>
     </section>
 
+    <!-- Menu Section -->
     <section class="menu" id="menu">
         <div class="menu-title">
             <h2>Our <span>Specials</span></h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus provident assumenda?
-            </p>
+            <p>Explore our delicious menu, made fresh daily with premium ingredients.</p>
         </div>
-
         <div class="menu-grid">
-
             <div class="menu-card">
-                <img src="images/pizza.png" alt="pizza">
-                <h3>Margherita pizza</h3>
+                <img src="images/pizza.png" alt="Margherita Pizza" loading="lazy">
+                <h3>Margherita Pizza</h3>
                 <p>Tomato, basil & fresh mozzarella.</p>
                 <span class="price">$29.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Margherita Pizza', 2909)">Order Now</a>
             </div>
 
             <div class="menu-card">
-                <img src="images/Pasta.png" alt="Pasta">
+                <img src="images/Pasta.png" alt="Creamy Pasta" loading="lazy">
                 <h3>Creamy Pasta</h3>
                 <p>Tomato, basil & fresh mozzarella.</p>
                 <span class="price">$19.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Creamy Pasta', 1909)">Order Now</a>
             </div>
 
             <div class="menu-card">
-                <img src="images/modern-food.png" alt="Salad">
+                <img src="images/modern-food.png" alt="Fried Chicken" loading="lazy">
                 <h3>Fried Chicken</h3>
-                <p>Spicy Fried Chicken .</p>
+                <p>Spicy Fried Chicken.</p>
                 <span class="price">$59.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Fried Chicken', 5909)">Order Now</a>
             </div>
 
             <div class="menu-card">
-                <img src="images/Sandwich.jpeg" alt="Sandwich">
+                <img src="images/Sandwich.jpeg" alt="Club Sandwich" loading="lazy">
                 <h3>Club Sandwich</h3>
-                <p>Toasted bread, veggies, Sandwich</p>
+                <p>Toasted bread, veggies & cheese.</p>
                 <span class="price">$19.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Club Sandwich', 1909)">Order Now</a>
+
             </div>
-
-
             <div class="menu-card">
-                <img src="images/Juice.png" alt="Juice">
+                <img src="images/Juice.png" alt="Fresh Juice" loading="lazy">
                 <h3>Fresh Juice</h3>
-                <p>orange ,Apple Fresh Juice</p>
+                <p>Orange & apple fresh juice.</p>
                 <span class="price">$10.09</span>
+                <a href="#" class="order-btn" onclick="payNow('Fresh Juice', 1009)">Order Now</a>
             </div>
-
             <div class="menu-card">
-                <img src="images/Biryani.png" alt="Biryani">
+                <img src="images/Biryani.png" alt="Hayderabadi Biryani" loading="lazy">
                 <h3>Hayderabadi Biryani</h3>
-                <p>Spicy rice dish ,Biryani</p>
+                <p>Spicy rice dish.</p>
                 <span class="price">$80.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Hayderabadi Biryani', 8009)">Order Now</a>
             </div>
-
             <div class="menu-card">
-                <img src="images/Ice Cream.jpg" alt="/Ice Cream">
-                <h3>Vanilla /Ice Cream</h3>
-                <p>Classic /Ice Cream</p>
+                <img src="images/Ice Cream.jpg" alt="Vanilla Ice Cream" loading="lazy">
+                <h3>Vanilla Ice Cream</h3>
+                <p>Classic vanilla ice cream.</p>
                 <span class="price">$40.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Vanilla Ice Cream', 4009)">Order Now</a>
             </div>
-
             <div class="menu-card">
-                <img src="images/green-Salad.png" alt="/Ice Cream">
+                <img src="images/green-Salad.png" alt="Green Salad" loading="lazy">
                 <h3>Green Salad</h3>
-                <p>Fresh Green Salad</p>
+                <p>Fresh green salad.</p>
                 <span class="price">$40.09</span>
+                 <a href="#" class="order-btn" onclick="payNow('Green Salad', 4009)">Order Now</a>
             </div>
-
         </div>
     </section>
 
-    <section class="Chefs" id="chefs">
-        <div class="chefs-title">
-            <h2>Meet Our <span>Chefs</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, rem!</p>
+    <!-- GALLERY SECTION-->
+    <section class="gallery-section" id="gallery">
+    <h2 class="section-title">Our Gallery</h2>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (1).jpg" alt="Dish 1">
         </div>
 
+        <div class="gallery-item">
+            <img src="images/dis-1 (2).jpg" alt="Dish 2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (3).jpg" alt="Dish 3">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (4).jpg" alt="Dish 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (5).jpg" alt="Dish 5">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (6).jpg" alt="Dish 6">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (7).jpg" alt="Dish 7">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dis-1 (8).jpg" alt="Dish 8">
+        </div>
+
+    </div>
+</section>
+
+    <!-- Chefs Section -->
+    <section class="chefs" id="chefs">
+        <div class="chefs-title">
+            <h2>Meet Our <span>Chefs</span></h2>
+            <p>Our professional chefs bring culinary perfection to every dish.</p>
+        </div>
         <div class="chefs-grid">
             <div class="chef-card">
-                <img src="images/Anaya Singh.jpg" alt="chef-1">
+                <img src="images/Anaya Singh.jpg" alt="Chef Anaya Singh" loading="lazy">
                 <h3>Chef Anaya Singh</h3>
                 <p>Italian & Continental Expert</p>
             </div>
-
             <div class="chef-card">
-                <img src="images/amrita morya.png" alt="chef-2">
-                <h3>Chef amrita morya</h3>
+                <img src="images/amrita morya.png" alt="Chef Amrita Morya" loading="lazy">
+                <h3>Chef Amrita Morya</h3>
                 <p>Indian Cuisine Specialist</p>
             </div>
-
             <div class="chef-card">
-                <img src="images/Rina Thomas.png" alt="chef-3">
+                <img src="images/Rina Thomas.png" alt="Chef Rina Thomas" loading="lazy">
                 <h3>Chef Rina Thomas</h3>
                 <p>Dessert & Bakery Pro</p>
             </div>
         </div>
     </section>
 
-    <section class="gallery-section" id="gallery">
-        <h2 class="section-title">Our Gallery</h2>
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (1).jpg" alt="Dish 1">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (2).jpg" alt="Dish 2">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (3).jpg" alt="Dish 3">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (4).jpg" alt="Dish 4">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (5).jpg" alt="Dish 5">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (6).jpg" alt="Dish 6">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (7).jpg" alt="Dish 7">
-            </div>
-
-            <div class="gallery-item">
-                <img src="images/dis-1 (8).jpg" alt="Dish 8">
-            </div>
-
-        </div>
-    </section>
-
+    <!-- About Section -->
     <section class="about-modern" id="about">
         <div class="about-wrapper">
             <div class="about-text">
-                <h2><span>Who</span>We Are</h2>
-                <p>
-                    Welcome to <strong>FreshDish</strong> - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Repellat blanditiis ipsa vel iusto sequi et exercitationem aspernatur quia distinctio suscipit?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, adipisci.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit distinctio blanditiis culpa
-                    voluptatibus nobis debitis!
-                </p>
+                <h2>Who <span>We Are</span></h2>
+                <p>Welcome to <strong>FreshDish</strong> – Your go-to platform for fresh, delicious meals delivered
+                    directly to you.</p>
+                <p>We prioritize quality, taste, and hygiene in every dish.</p>
                 <a href="#menu" class="about-cta">View Our Menu</a>
             </div>
             <div class="about-img">
-                <img src="images/modern-food.png" alt="modern-food">
+                <img src="images/modern-food.png" alt="FreshDish food" loading="lazy">
             </div>
         </div>
     </section>
 
-
+    <!-- App Section -->
     <section class="app-section">
         <div class="app-wrapper">
             <div class="app-text">
                 <h3 class="app-subtitle">Download Now</h3>
                 <h2 class="app-title">Get Our Mobile App</h2>
-                <p class="app-desc">
-                    Order food, reserve a table, or track your delivery in real time — all from our easy-to-use mobile
-                    app.
-                </p>
+                <p class="app-desc">Order food, reserve tables, and track your delivery in real time with our
+                    app.</p>
                 <div class="app-buttons">
                     <a href="#"><img src="images/app1.png" alt="App Store"></a>
                     <a href="#"><img src="images/app2.png" alt="Google Play"></a>
                 </div>
             </div>
             <div class="app-image">
-                <img src="images/movil-app.png" alt="App preview">
+                <img src="images/movil-app.png" alt="App preview" loading="lazy">
             </div>
         </div>
     </section>
 
-
+    <!-- Contact Section -->
     <section class="contact-modern" id="contact">
         <div class="contact-container">
             <div class="contact-header">
-                <h2>Any Problem <span>So Please Contact</span></h2>
-                <p>We're here to help you. Anytime you can reach out</p>
+                <h2>Any Problem? <span>Contact Us</span></h2>
+                <p>We're here to help you anytime.</p>
             </div>
-
             <div class="contact-box">
                 <form class="contact-form">
                     <div class="input-box">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" placeholder="Your Name" required>
                     </div>
-
                     <div class="input-box">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" placeholder="Your Email" required>
                     </div>
-
                     <div class="input-box">
                         <i class="fa-solid fa-comment"></i>
                         <textarea placeholder="Your Message" required></textarea>
@@ -280,15 +267,12 @@
         </div>
     </section>
 
-
-
-    <footer class="footer" id="contact">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
-
             <div class="footer-box about">
-                <h2>Rajasthan Tadka</h2>
-                <p>Authentic Rajasthani flavors crafted with traditional spices, giving you the true taste of Rajasthan in every bite.
-                </p>
+                <h2>FreshDish</h2>
+                <p>Fresh and delicious meals delivered to your doorstep. Quality, hygiene, and taste guaranteed!</p>
                 <div class="socials">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -296,44 +280,33 @@
                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-
             <div class="footer-box links">
-                <h3>Our Menu</h3>
+                <h3>Menu</h3>
                 <a href="#">Creamy Pasta</a>
                 <a href="#">Fried Chicken</a>
-                <a href="#">Vanilla/Ice Cream</a>
-                <a href="#">fresh Juice</a>
+                <a href="#">Vanilla Ice Cream</a>
+                <a href="#">Fresh Juice</a>
                 <a href="#">Green Salad</a>
             </div>
-
             <div class="footer-box links">
                 <h3>Useful Links</h3>
-                <a href="#">About Us</a>
-                <a href="#">Chefs</a>
-                <a href="#">Testimonials</a>
-                <a href="#">Blog</a>
+                <a href="#about">About Us</a>
+                <a href="#chefs">Chefs</a>
+                <a href="#contact">Contact</a>
                 <a href="#">Privacy Policy</a>
             </div>
-
             <div class="footer-box contact">
                 <p><i class="fa-solid fa-phone"></i> +91 887384132</p>
-                <p><i class="fa-solid fa-envelope"></i> info@Rajasthani.in</p>
-                <p><i class="fa-solid fa-location-dot"></i> Mi Road, Jaipur, Rajasthan</p>
-                <div class="app-download">
-                    <a href="#"><img src="images/app2.png" alt="Google play"></a>
-                    <a href="#"><img src="images/app1.png" alt="App Store"></a>
-                </div>
+                <p><i class="fa-solid fa-envelope"></i> info@freshdish.in</p>
+                <p><i class="fa-solid fa-location-dot"></i> Jaipur, Rajasthan, India</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy;2025 <strong>Fresh Dish </strong>. All right reserved. | Accepts:</p>
-            <i class="fa-brands fa-paypal"></i>
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-brands fa-cc-amex"></i>
+            <p>&copy;2025 <strong>FreshDish</strong>. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
