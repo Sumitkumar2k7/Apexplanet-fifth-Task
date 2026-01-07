@@ -1,6 +1,6 @@
-/* ===========================
+/* ==========================
    Reset & Base Styles
-=========================== */
+========================== */
 * {
     margin: 0;
     padding: 0;
@@ -24,9 +24,9 @@ img {
     display: block;
 }
 
-/* ===========================
+/* ==========================
    Navbar
-=========================== */
+========================== */
 .navbar {
     position: fixed;
     width: 100%;
@@ -74,7 +74,6 @@ img {
     color: #FF4C3B;
 }
 
-/* Hamburger menu for mobile */
 .menu-icon {
     display: none;
     font-size: 24px;
@@ -85,15 +84,15 @@ img {
     display: none;
 }
 
-/* ===========================
-   Hero Section Image
-=========================== */
+/* ==========================
+   Hero Section
+========================== */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 100px 50px;
-    flex-wrap: wrap; /* For responsiveness */
+    flex-wrap: wrap;
 }
 
 .hero-content {
@@ -129,24 +128,23 @@ img {
     background-color: #e03e2f;
 }
 
-/* Hero Image */
 .hero-image {
     flex: 1;
     min-width: 300px;
-    text-align: right; /* Image ko right align karein */
-    margin-left: 0; /* Left margin remove */
-    margin-right: -50px; /* Thoda aur right shift karne ke liye */
+    text-align: right;
+    margin-left: 0;
+    margin-right: -50px;
 }
 
 .hero-image img {
-    width: 80%; /* Image ka size */
+    width: 80%;
     max-width: 500px;
     height: auto;
 }
 
-/* ===========================
-   Features Section (Updated)
-=========================== */
+/* ==========================
+   Features Section
+========================== */
 .features {
     padding: 100px 50px;
     text-align: center;
@@ -172,7 +170,7 @@ img {
     flex: 1 1 300px;
     max-width: 350px;
     background-color: #fff5f5;
-    padding: 50px; /* More padding for bigger box */
+    padding: 50px;
     border-radius: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -185,16 +183,16 @@ img {
 }
 
 .box img {
-    width: 150px; /* Bigger image */
-    height: 150px; /* Keep it square */
-    object-fit: contain; /* Maintain image proportions */
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
     display: block;
-    margin: 0 auto 25px auto; /* Center horizontally with bottom margin */
+    margin: 0 auto 25px;
 }
 
 .box h3 {
     margin-bottom: 15px;
-    font-size: 24px; /* Bigger heading */
+    font-size: 24px;
     color: #FF4C3B;
 }
 
@@ -203,10 +201,9 @@ img {
     line-height: 1.6;
 }
 
-
-/* ===========================
+/* ==========================
    Menu Section
-=========================== */
+========================== */
 .menu {
     padding: 80px 50px;
     text-align: center;
@@ -233,7 +230,6 @@ img {
     justify-content: center;
 }
 
-/* ======= Menu Cards ======= */
 .menu-card {
     flex: 1 1 250px;
     border-radius: 20px;
@@ -241,26 +237,23 @@ img {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     background-color: #fff;
     transition: 0.3s;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 15px; /* button ke liye thoda space */
+    padding-bottom: 15px;
 }
 
 .menu-card:hover {
     transform: translateY(-5px);
 }
 
-/* IMAGE FULL WIDTH, CUT NA HO */
 .menu-card img {
     width: 100%;
-    height: auto;          /* cut na ho */
-    max-height: 180px;     /* card ke liye chota height */
-    object-fit: contain;   /* poora dikhe */
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
 }
 
-/* HEADINGS AND TEXT */
 .menu-card h3 {
     font-size: 18px;
     margin: 10px 0 5px;
@@ -280,7 +273,6 @@ img {
     margin-bottom: 10px;
 }
 
-/* Order Now Button */
 .order-btn {
     display: inline-block;
     margin: 10px auto;
@@ -291,7 +283,6 @@ img {
     font-size: 15px;
     font-weight: 600;
     transition: 0.3s ease;
-    opacity: 1; /* always visible */
     text-align: center;
 }
 
@@ -300,9 +291,9 @@ img {
     transform: translateY(-2px);
 }
 
-/* ===========================
+/* ==========================
    Gallery Section
-=========================== */
+========================== */
 .gallery-section {
     padding: 80px 50px;
     text-align: center;
@@ -336,10 +327,9 @@ img {
     transform: scale(1.1);
 }
 
-
-/* ===========================
+/* ==========================
    Chefs Section
-=========================== */
+========================== */
 .chefs {
     padding: 80px 50px;
     text-align: center;
@@ -376,11 +366,10 @@ img {
 .chef-card img {
     width: 100%;
     height: 240px;
-    object-fit: contain;     /* 👈 CUT nahi hoga */
-    background-color: #fff;  /* white background */
-    padding: 15px;           /* thoda gap for safety */
+    object-fit: contain;
+    background-color: #fff;
+    padding: 15px;
 }
-
 
 .chef-card h3 {
     font-size: 20px;
@@ -392,9 +381,9 @@ img {
     margin-bottom: 15px;
 }
 
-/* ===========================
+/* ==========================
    About Section
-=========================== */
+========================== */
 .about-modern {
     padding: 80px 50px;
 }
@@ -447,9 +436,9 @@ img {
     object-fit: cover;
 }
 
-/* ===========================
+/* ==========================
    App Section
-=========================== */
+========================== */
 .app-section {
     padding: 0px 50px;
     background-color: #fef2f2;
@@ -484,7 +473,7 @@ img {
 
 .app-buttons {
     display: flex;
-    gap: 15px;              /* Dono ke beech space */
+    gap: 15px;
     align-items: center;
 }
 
@@ -495,15 +484,15 @@ img {
 }
 
 .app-image img {
-    width: 80%;          /* Pehle 100% hoga, ab chhota */
-    max-width: 600px;    /* Desktop pe limit */
+    width: 80%;
+    max-width: 600px;
     margin: auto;
     display: block;
 }
 
-/* ===========================
+/* ==========================
    Contact Section
-=========================== */
+========================== */
 .contact-modern {
     padding: 80px 50px;
 }
@@ -579,9 +568,9 @@ img {
     background-color: #e94330;
 }
 
-/* ===========================
-   Footer (Improved & Clean)
-=========================== */
+/* ==========================
+   Footer
+========================== */
 .footer {
     background: #1c1c1c;
     color: #fff;
@@ -596,7 +585,6 @@ img {
     gap: 40px;
 }
 
-/* Footer Brand */
 .footer-box h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -610,7 +598,6 @@ img {
     margin-bottom: 20px;
 }
 
-/* Social Icons */
 .footer .socials {
     display: flex;
     gap: 15px;
@@ -633,7 +620,6 @@ img {
     color: #fff;
 }
 
-/* Footer Titles */
 .footer-box h3 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -650,7 +636,6 @@ img {
     bottom: -8px;
 }
 
-/* Footer Links */
 .footer-box a {
     display: block;
     color: #ccc;
@@ -664,17 +649,6 @@ img {
     padding-left: 5px;
 }
 
-/* Contact Info */
-.footer-box .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    color: #ccc;
-    font-size: 15px;
-}
-
-/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid #333;
     margin-top: 40px;
@@ -684,41 +658,17 @@ img {
     color: #aaa;
 }
 
-/* ===========================
-   Responsive Footer
-=========================== */
+/* ==========================
+   Responsive Styles
+========================== */
 @media (max-width: 992px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
     }
-}
-
-@media (max-width: 600px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-box h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .footer .socials {
-        justify-content: center;
-    }
-}
-
-
-/* ===========================
-   Responsive
-=========================== */
-@media (max-width: 992px) {
     .hero, .about-wrapper, .app-wrapper {
         flex-direction: column;
         text-align: center;
     }
-
     .nav-links {
         position: absolute;
         top: 70px;
@@ -729,27 +679,21 @@ img {
         border-top: 1px solid #ddd;
         display: none;
     }
-
     #menu-toggle:checked + .menu-icon + .nav-links {
         display: flex;
     }
-
     .menu-icon {
         display: block;
     }
-
     .nav-links li {
         margin: 15px 0;
     }
-
     .hero-content h1 {
         font-size: 36px;
     }
-
     .about-text h2 {
         font-size: 28px;
     }
-
     .app-title {
         font-size: 28px;
     }
@@ -759,28 +703,21 @@ img {
     .hero-content h1 {
         font-size: 28px;
     }
-
     .hero-content p {
         font-size: 16px;
     }
-
     .menu-card img {
         height: 180px;
     }
-
     .chef-card img {
         height: 250px;
     }
-
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .footer-box {
         width: 100%;
     }
 }
-
-
