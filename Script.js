@@ -4,25 +4,21 @@ const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Get values from form
     const name = this.querySelector('input[type="text"]').value.trim();
     const email = this.querySelector('input[type="email"]').value.trim();
     const message = this.querySelector("textarea").value.trim();
 
-    // Check if any field is empty
     if (!name || !email || !message) {
         alert("❌ Please fill all fields");
         return;
     }
 
-    // Simple email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         alert("❌ Please enter a valid email address");
         return;
     }
 
-    // Success message and reset form
     alert("✅ Message sent successfully!");
     this.reset();
 });
@@ -35,7 +31,7 @@ window.addEventListener("scroll", () => {
     let currentSection = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.offsetHeight;
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -43,7 +39,6 @@ window.addEventListener("scroll", () => {
         }
     });
 
-    // Remove active class from all links
     navLinks.forEach(link => {
         link.classList.remove("active");
         if (link.getAttribute("href") === `#${currentSection}`) {
@@ -65,15 +60,25 @@ navLinks.forEach(link => {
 
 // ================= Razorpay Payment =================
 function payNow(item, price) {
+
+    // ✅ Safety check (Vercel issue fix)
+    if (typeof Razorpay === "undefined") {
+        alert("❌ Razorpay SDK not loaded. Please refresh.");
+        return;
+    }
+
     const options = {
-        key: "rzp_test_RiksrCFbdFEKhn", // Razorpay Test/Live Key
-        amount: price, // in paise
+        key: "rzp_test_RiksrCFbdFEKhn",   // TEST KEY
+        amount: Math.round(price * 100), 
         currency: "INR",
         name: "FreshDish",
         description: `Payment for ${item}`,
-        image: "images/S.png",
+        image: "https://your-vercel-site.vercel.app/images/S.png",
         handler: function (response) {
-            alert("✅ Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+            alert(
+                "✅ Payment Successful!\nPayment ID: " +
+                response.razorpay_payment_id
+            );
         },
         theme: {
             color: "#FF4C3B"
