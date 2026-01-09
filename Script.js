@@ -81,7 +81,7 @@ function payNow(item, price) {
         currency: "INR",
         name: "FreshDish",
         description: `Payment for ${item}`,
-        image: "/images/S.png", // ✅ Vercel safe path
+        image: "images/S.png", // ✅ Vercel safe path
         handler: function (response) {
             alert(
                 "✅ Payment Successful!\nPayment ID: " +
