@@ -1,27 +1,33 @@
 // ================= Contact Form Validation =================
 const contactForm = document.querySelector(".contact-form");
 
-contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const name = this.querySelector('input[type="text"]').value.trim();
-    const email = this.querySelector('input[type="email"]').value.trim();
-    const message = this.querySelector("textarea").value.trim();
+        // Get values from form
+        const name = this.querySelector('input[type="text"]').value.trim();
+        const email = this.querySelector('input[type="email"]').value.trim();
+        const message = this.querySelector("textarea").value.trim();
 
-    if (!name || !email || !message) {
-        alert("❌ Please fill all fields");
-        return;
-    }
+        // Check if any field is empty
+        if (!name || !email || !message) {
+            alert("❌ Please fill all fields");
+            return;
+        }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert("❌ Please enter a valid email address");
-        return;
-    }
+        // Simple email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("❌ Please enter a valid email address");
+            return;
+        }
 
-    alert("✅ Message sent successfully!");
-    this.reset();
-});
+        // Success message and reset form
+        alert("✅ Message sent successfully!");
+        this.reset();
+    });
+}
 
 // ================= Navbar Active Link on Scroll =================
 const sections = document.querySelectorAll("section");
@@ -31,10 +37,10 @@ window.addEventListener("scroll", () => {
     let currentSection = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
+        const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             currentSection = section.getAttribute("id");
         }
     });
@@ -50,30 +56,32 @@ window.addEventListener("scroll", () => {
 // ================= Smooth Scroll =================
 navLinks.forEach(link => {
     link.addEventListener("click", e => {
-        e.preventDefault();
-        const targetSection = document.querySelector(link.getAttribute("href"));
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth" });
+        const targetId = link.getAttribute("href");
+
+        if (targetId.startsWith("#")) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
         }
     });
 });
 
 // ================= Razorpay Payment =================
 function payNow(item, price) {
-
-    // ✅ Safety check (Vercel issue fix)
     if (typeof Razorpay === "undefined") {
-        alert("❌ Razorpay SDK not loaded. Please refresh.");
+        alert("❌ Razorpay SDK not loaded");
         return;
     }
 
     const options = {
-        key: "rzp_test_RiksrCFbdFEKhn",   // TEST KEY
-        amount: Math.round(price * 100), 
+        key: "rzp_test_RiksrCFbdFEKhn", // Razorpay Test Key
+        amount: price, // in paise
         currency: "INR",
         name: "FreshDish",
         description: `Payment for ${item}`,
-        image: "https://your-vercel-site.vercel.app/images/S.png",
+        image: "/images/S.png", // ✅ Vercel safe path
         handler: function (response) {
             alert(
                 "✅ Payment Successful!\nPayment ID: " +
