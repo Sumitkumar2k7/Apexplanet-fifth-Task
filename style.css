@@ -12,6 +12,7 @@ body {
     background-color: #fff;
     color: #333;
     line-height: 1.6;
+    padding-top: 80px; /* FIX: fixed navbar overlap */
 }
 
 a {
@@ -88,10 +89,10 @@ img {
    Hero Section
 ========================== */
 .hero {
-    display: flex;
-    align-items: center;
+    display: flex ;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 100px 50px;
+    padding: 80px 50px;
     flex-wrap: wrap;
 }
 
@@ -134,6 +135,7 @@ img {
     text-align: right;
     margin-left: 0;
     margin-right: -50px;
+    transform: translateY(-90px);
 }
 
 .hero-image img {
@@ -679,7 +681,7 @@ img {
         border-top: 1px solid #ddd;
         display: none;
     }
-    #menu-toggle:checked + .menu-icon + .nav-links {
+    #menu-toggle:checked ~ .nav-links { /* FIX */
         display: flex;
     }
     .menu-icon {
@@ -713,8 +715,7 @@ img {
         height: 250px;
     }
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* FIX */
         text-align: center;
     }
     .footer-box {
